@@ -1,0 +1,16 @@
+@use "../abstract/" as *;
+
+#about-us-page {
+  text-align: center;
+
+ @extend %h1-line;
+
+  .img-wrapper {
+    @include flexCenter;
+  }
+
+  .about-text {
+    margin: 2rem;
+    padding: 2.5rem;
+  }
+}

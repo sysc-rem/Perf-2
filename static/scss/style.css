@@ -1,0 +1,278 @@
+*, ::after, ::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+main {
+  height: 100%;
+  display: block;
+}
+
+#contact-us-page h1, #about-us-page h1 {
+  font-weight: normal;
+  font-size: 2.2rem;
+  margin: 40px 0;
+  position: relative;
+}
+#contact-us-page h1::before, #about-us-page h1::before {
+  content: "";
+  position: absolute;
+  width: 24rem;
+  height: 3px;
+  background: rgb(216, 233, 168);
+  bottom: -10px;
+  text-align: center;
+}
+
+.home {
+  height: 95vh;
+}
+
+.gallery {
+  height: 95vh;
+}
+.gallery__container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.gallery__container h1 {
+  font-weight: normal;
+  font-size: 2.2rem;
+  margin: 40px 0;
+  position: relative;
+}
+.gallery__container h1::before {
+  content: "";
+  position: absolute;
+  width: 24rem;
+  height: 3px;
+  background: rgb(216, 233, 168);
+  bottom: -10px;
+  text-align: center;
+}
+.gallery__container__top-content {
+  width: 100vw;
+  margin: 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 3px 3px 5px lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.gallery__container__top-content h3 {
+  color: rgb(78, 159, 61);
+  padding: 0 50px;
+  border-right: 2px solid gray;
+  height: 100%;
+}
+.gallery__container__top-content label {
+  display: inline-block;
+  height: 100%;
+  padding: 0 50px;
+  line-height: 60px;
+  transition: color 0.5s ease-in-out;
+  cursor: pointer;
+}
+.gallery__container__top-content label:hover {
+  color: rgb(78, 159, 61);
+}
+.gallery__container__photos {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+.gallery__container__photos .pic {
+  position: relative;
+  height: 330px;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 5px lightgray;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.gallery__container__photos .pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery__container__photos .pic::before {
+  content: "PHOTO GALLERY";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-weight: bold;
+  width: 100%;
+  margin-top: -100%;
+  opacity: 0;
+  transition: 0.3s;
+  transition-delay: 0.2s;
+  z-index: 1;
+}
+.gallery__container__photos .pic::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-radius: 1rem;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+  opacity: 0;
+}
+.gallery__container__photos .pic:hover::after {
+  height: 100%;
+  opacity: 1;
+}
+.gallery__container__photos .pic:hover::before {
+  margin-top: 0;
+  opacity: 1;
+}
+.gallery #checked1:checked ~ .gallery__container .gallery__container__photos .pic {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+}
+.gallery #checked2:checked ~ .gallery__container .gallery__container__photos .pnc {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+}
+.gallery #checked3:checked ~ .gallery__container .gallery__container__photos .citech {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+}
+.gallery #checked4:checked ~ .gallery__container .gallery__container__photos .others {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+}
+.gallery #checked2:checked ~ .gallery__container .gallery__container__photos .others,
+.gallery #checked2:checked ~ .gallery__container .gallery__container__photos .citech {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+.gallery #checked3:checked ~ .gallery__container .gallery__container__photos .others,
+.gallery #checked3:checked ~ .gallery__container .gallery__container__photos .pnc {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+.gallery #checked4:checked ~ .gallery__container .gallery__container__photos .citech,
+.gallery #checked4:checked ~ .gallery__container .gallery__container__photos .pnc {
+  opacity: 0;
+  transform: scale(0);
+  position: absolute;
+  transition: 0.5s;
+}
+
+#about-us-page {
+  text-align: center;
+}
+#about-us-page .img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#about-us-page .about-text {
+  margin: 2rem;
+  padding: 2.5rem;
+}
+
+#contact-us-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+  height: 94vh;
+  width: 100vw;
+}
+#contact-us-page h1::before {
+  width: 14rem;
+}
+#contact-us-page .form {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 30rem;
+}
+
+.c-item {
+  max-height: 30rem;
+  min-height: 10rem;
+  width: 100vw;
+}
+.c-item .c-image {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.home-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 34vh;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-bottom: 1rem;
+}
+.home-btn__btns {
+  width: 15em;
+  height: 12em;
+}
+.home-btn__btns .btn-wrapper {
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  text-wrap: wrap;
+}
+.home-btn__btns .btn-wrapper h5 {
+  color: rgb(78, 159, 61);
+}
+
+.navbar-brand {
+  color: #066634;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: rgb(78, 159, 61);
+}

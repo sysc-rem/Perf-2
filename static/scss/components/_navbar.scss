@@ -1,0 +1,12 @@
+@use '../abstract/' as *;
+
+.navbar-brand{
+
+    color: $secondary-color;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: $accent-color;
+}

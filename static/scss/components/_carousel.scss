@@ -1,0 +1,14 @@
+
+
+
+
+.c-item{
+    max-height: 30rem;
+    min-height: 10rem;
+    width: 100vw;
+    .c-image{
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.9);
+    }
+}

@@ -1,0 +1,11 @@
+@use '../abstract/mixins' as *;
+
+body{
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+main{
+    height: 100%;
+    display: block;
+}

@@ -1,0 +1,20 @@
+@use "../abstract/" as *;
+
+#contact-us-page {
+  @include flexCenter(column);
+
+  @extend %h1-line;
+  h1::before{
+    width: 14rem;
+  }
+  gap: 5rem;
+  height: 94vh;
+  width: 100vw;
+ 
+
+  .form{
+    width: fit-content;
+    margin-left: 30rem
+ 
+  }
+}

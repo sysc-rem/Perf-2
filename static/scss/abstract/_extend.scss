@@ -1,0 +1,21 @@
+@use '../abstract/colors' as *;
+
+%h1-line{
+    h1 {
+        font-weight: normal;
+        font-size: 2.2rem;
+        margin: 40px 0;
+        position: relative;
+      }
+      h1::before {
+        content: "";
+        position: absolute;
+        width: 24rem;
+        height: 3px;
+        background: $accent-secondary-color;
+        bottom: -10px;
+  
+        // animation: animate 4s linear infinite;
+        text-align: center;
+      }
+}
