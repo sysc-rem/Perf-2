@@ -197,6 +197,9 @@ main {
 #about-us-page {
   text-align: center;
 }
+#about-us-page h1::before {
+  width: 11rem;
+}
 #about-us-page .img-wrapper {
   display: flex;
   justify-content: center;

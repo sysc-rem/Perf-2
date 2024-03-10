@@ -4,6 +4,9 @@
   text-align: center;
 
  @extend %h1-line;
+ h1::before{
+  width: 11rem;
+}
 
   .img-wrapper {
     @include flexCenter;
