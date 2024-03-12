@@ -70,7 +70,7 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 2px solid rgb(78, 159, 61);
+  border: 3px solid rgb(78, 159, 61);
   border-radius: 1.5rem;
 }
 
@@ -100,6 +100,33 @@ main {
 #about-us-page .about-text {
   margin: 2rem;
   padding: 2.5rem;
+  text-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#about-us-page .about-text .long-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgb(78, 159, 61);
+}
+#about-us-page .about-text .long-text .mission {
+  border-right: 2px solid rgb(78, 159, 61);
+  padding-right: 5rem;
+}
+#about-us-page .about-text .core-values {
+  border-bottom: 2px solid rgb(78, 159, 61);
+}
+#about-us-page .about-text .core-values h3 {
+  text-align: center;
+}
+#about-us-page .about-text .core-values p {
+  margin-left: 8rem;
 }
 
 #contact-us-page {
@@ -141,7 +168,6 @@ main {
 .c-item {
   max-height: 30rem;
   min-height: 10rem;
-  width: 100vw;
 }
 .c-item .c-image {
   height: 100%;
@@ -180,11 +206,14 @@ main {
 }
 
 .navbar-brand {
-  color: #066634;
   font-weight: bold;
   font-size: 2rem;
 }
 
 .nav-link {
   color: rgb(78, 159, 61);
+}
+
+.lol {
+  background: rgba(255, 255, 255, 0.2);
 }

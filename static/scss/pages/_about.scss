@@ -21,5 +21,29 @@
   .about-text {
     margin: 2rem;
     padding: 2.5rem;
+    text-align: start;
+    @include flexCenter(column);
+    .long-text{
+      @include flexCenter();
+     
+      gap: 5rem;
+      margin-bottom: 1rem;
+
+      .mission{
+        border-right: 2px solid $accent-color;
+        padding-right: 5rem;
+   
+      }
+      border-bottom: 2px solid $accent-color;
+    }
+    .core-values{
+      h3{
+        text-align: center;
+      }
+      p{
+        margin-left: 8rem;
+      }
+      border-bottom: 2px solid $accent-color;
+    }
   }
 }
