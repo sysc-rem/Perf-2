@@ -2,6 +2,7 @@
 
 #about-us-page {
   text-align: center;
+  @include flexCenter(column);
   @extend %h1-line;
   h1::before {
     width: 11rem;

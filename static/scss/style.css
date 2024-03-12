@@ -76,6 +76,10 @@ main {
 
 #about-us-page {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 #about-us-page h1::before {
   width: 11rem;
