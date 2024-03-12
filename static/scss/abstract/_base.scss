@@ -6,6 +6,5 @@ body{
 }
 
 main{
-    height: 100%;
-    display: block;
+    @include flexCenter(column);
 }

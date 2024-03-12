@@ -103,21 +103,21 @@
           <div class="carousel-inner">
             <div class="carousel-item active c-item">
               <img
-                src="/static/assets/images/home/102734-Monogatari_Series-Senjougahara_Hitagi.jpg"
+                src="./static/assets/images/home/431752625_387205597585053_454087.webp"
                 class="d-block w-100 c-image"
                 alt="..."
               />
             </div>
             <div class="carousel-item c-item">
               <img
-                src="/static/assets/images/home/344967.png"
+                src="./static/assets/images/home/431760271_387205407585072_912995.webp"
                 class="d-block w-100 c-image"
                 alt="..."
               />
             </div>
             <div class="carousel-item c-item">
               <img
-                src="/static/assets/images/home/481107.jpg"
+                src="./static/assets/images/home/432774049_387206940918252_856463.webp"
                 class="d-block w-100 c-image"
                 alt="..."
               />
@@ -181,37 +181,66 @@
       </section>
 
       <section class="gallery" id="gallery-page">
-        <input type="radio" name="photos" id="checked1" />
-        <input type="radio" name="photos" id="checked2" />
-        <input type="radio" name="photos" id="checked3" />
-        <input type="radio" name="photos" id="checked4" />
+        <h1 class="title">Gallery</h1>
+        <div class="img-container">
+          <div class="columns">
+            <div class="img-wrapper">
+              <img
+                src="./static/assets/images/gallery/431486346_1059578272007763_21239.webp"
+                alt=""
+              />
+            </div>
+            <div class="img-wrapper">
+              <img
+              src="./static/assets/images/gallery/431612571_7370171839695742_89251.webp"
+                alt=""
 
-        <div class="gallery__container">
-          <h1>OUR PHOTO GALLERY</h1>
-          <div class="gallery__container__top-content">
-            <h3>PHOTO GALLERY</h3>
-            <label for="checked1"> All Photos</label>
-            <label for="checked2"> PnC</label>
-            <label for="checked3"> CiTech</label>
-            <label for="checked4"> Others</label>
+              />
+            </div>
+
+            <div class="img-wrapper">
+              <img
+                src="./static/assets/images/gallery/431680356_1530544024476167_91330.webp"
+                alt=""
+              />
+            </div>
           </div>
+          <div class="columns">
+            <div class="img-wrapper">
+              <img
+                src="./static/assets/images/gallery/40458252323_34477beb65_o.jpg"
+                alt=""
+              />
+            </div>
 
-          <div class="gallery__container__photos">
-            <div class="pic pnc">
+            <div class="img-wrapper">
               <img
-                src="./static/assets/images/gallery/pnc/Sylphiette.full.3989843.png"
+                src="./static/assets/images/gallery/432257233_1471331943799368_55030.webp"
                 alt=""
               />
             </div>
-            <div class="pic citech">
+
+            <div class="img-wrapper">
+              <img alt=""  src="./static/assets/images/gallery/432263916_1609653609852016_72692.webp"/>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="img-wrapper">
               <img
-                src="./static/assets/images/gallery/citech/369985900_680987917392362_220150.png"
+                src=".//static/assets/images/gallery/432361821_1075790873682663_84499.webp"
                 alt=""
               />
             </div>
-            <div class="pic others">
+
+            <div class="img-wrapper">
               <img
-                src="./static/assets/images/gallery/others/40458252323_34477beb65_o.jpg"
+                src="./static/assets/images/gallery/40458135373_ced6dfa2f1_o.jpg"
+                alt=""
+              />
+            </div>
+            <div class="img-wrapper">
+              <img
+              src="./static/assets/images/gallery/431742984_896431242231046_128751.webp"
                 alt=""
               />
             </div>
@@ -221,7 +250,7 @@
 
       <section id="about-us-page">
         <h1>ABOUT US</h1>
-        <div class="img-wrapper">
+        <div class="about-img-wrapper">
           <img src="./static/assets/images/about/History.pnc_.png" alt="" />
         </div>
         <div class="about-text">
@@ -235,52 +264,55 @@
         </div>
       </section>
 
-      <section id="contact-us-page">
-        <h1>CONTACT US</h1>
-        <div class="form">
-          <h3>Get in touch.</h3>
-
-          <form action="#" class="row g-4  needs-validation" novalidate>
-            <div class="col-auto">
-              <label for="validationCustomName" class="form-label"
-                >Name</label
-              >
-              <div class="input-group has-validation">
-                <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-person"></i></span>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="validationCustomName"
-                  aria-describedby="inputGroupPrepend"
-                  required
-                />
-                <div class="invalid-feedback">Please enter a valid name.</div>
-              </div>
+      <section class="contact-us-page" id="contact-us-page">
+        <h1> Contact Us</h1>
+        <div class="contact-container">
+          <div class="left-side">
+            <div class="left-content">
+              <i class="fa-solid fa-map-location"></i>
+              <h5 class="topic">Address</h5>
+              <h6 class="text">Brgy. Banay-Banay</h6>
+              <h6 class="text">Cabuyao, Laguna</h6>
             </div>
-            <div class="col-auto">
-              <label for="validationCustomEmail" class="form-label"
-                >Email</label
-              >
-              <div class="input-group has-validation">
-                <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-envelope-at"></i></span>
+            <div class="left-content">
+              <i class="fa-solid fa-phone"></i>
+              <h5 class="topic">telephone</h5>
+              <h6 class="text">+63 995-6598-346</h6>
+            </div>
+            <div class="left-content">
+              <i class="fa-solid fa-at"></i>
+              <h5 class="topic">Email</h5>
+              <h6 class="text">raipam44@gmail.com</h6>
+            </div>
+          </div>
+          <div class="right-side">
+            <h5>Send us a message</h5>
+            <p>If you have any concern, please do contact us!</p>
+            <form action="#">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Email address</label
+                >
                 <input
                   type="email"
                   class="form-control"
-                  id="validationCustomEmail"
-                  aria-describedby="inputGroupPrepend"
-                  required
+                  id="exampleFormControlInput1"
+                  placeholder="name@example.com"
                 />
-                <div class="invalid-feedback">Please type a valid Email.</div>
               </div>
-            </div>
-            <div class="col-7">
-              <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <div class="col-12">
-              <button class="btn  btn-success" type="submit">Submit form</button>
-            </div>
-          </form>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                  placeholder="Enter your message"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <input type="button" class="btn btn-success" value="Send" />
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </main>

@@ -1,164 +1,35 @@
-@use "../abstract/" as *;
+@use '../abstract/' as *;
 
 .gallery {
-  height: 95vh;
-
-  &__container {
-    width: 100%;
-    text-align: center;
-    @include flexCenter(column);
-
-    h1 {
-      font-weight: normal;
-      font-size: 2.2rem;
-      margin: 40px 0;
-      position: relative;
-    }
-    h1::before {
-      content: "";
-      position: absolute;
-      width: 24rem;
-      height: 3px;
-      background: $accent-secondary-color;
-      bottom: -10px;
-
-      // animation: animate 4s linear infinite;
-      text-align: center;
-    }
-
-    &__top-content {
-      width: 100vw;
-      margin: 2rem;
-      border-radius: 1.2rem;
-      box-shadow: 3px 3px 5px lightgray;
-      @include flexCenter;
-      justify-content: start;
-      flex-wrap: wrap;
-      gap: 5rem;
-
-      h3 {
-        color: $accent-color;
-        padding: 0 50px;
-        border-right: 2px solid gray;
-        height: 100%;
-      }
-
-      label {
-        display: inline-block;
-        height: 100%;
-        padding: 0 50px;
-        line-height: 60px;
-        transition: color 0.5s ease-in-out;
-        cursor: pointer;
-      }
-
-      label:hover {
-        color: $accent-color;
-      }
-    }
-    &__photos {
-      width: 90%;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 2rem;
-
-      .pic {
-        position: relative;
-        height: 330px;
-        border-radius: 1rem;
-        box-shadow: 3px 3px 5px lightgray;
-        cursor: pointer;
-        transition: 0.5s ease-in-out;
-
-        img {
-          width: 100%;
-          height: 100%;
-          border-radius: 1rem;
-          object-fit: cover;
-        }
-      }
-      .pic::before {
-        content: "PHOTO GALLERY";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        color: white;
-        transform: translate(-50%, -50%);
-        font-size: 22px;
-        font-weight: bold;
-        width: 100%;
-        margin-top: -100%;
-        opacity: 0;
-        transition: 0.3s;
-        transition-delay: 0.2s;
-        z-index: 1;
-      }
-      .pic::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        border-radius: 1rem;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
-        transition: 0.3s;
-        opacity: 0;
-      }
-
-      .pic:hover::after {
-        height: 100%;
-        opacity: 1;
-      }
-      .pic:hover::before {
-        margin-top: 0;
-        opacity: 1;
-      }
-    }
+  text-align: center;
+  margin: 2rem;
+  min-height: 95vh;
+  @extend %h1-line;
+  h1::before {
+    width: 7rem;
   }
+}
 
-  #checked1:checked ~ .gallery__container .gallery__container__photos .pic {
-    opacity: 1;
-    transform: scale(1);
-    position: relative;
-  }
-  #checked2:checked ~ .gallery__container .gallery__container__photos .pnc {
-    opacity: 1;
-    transform: scale(1);
-    position: relative;
-  }
-  #checked3:checked ~ .gallery__container .gallery__container__photos .citech {
-    opacity: 1;
-    transform: scale(1);
-    position: relative;
-  }
-  #checked4:checked ~ .gallery__container .gallery__container__photos .others {
-    opacity: 1;
-    transform: scale(1);
-    position: relative;
-  }
+.img-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
 
-  #checked2:checked ~ .gallery__container .gallery__container__photos .others,
-  #checked2:checked ~ .gallery__container .gallery__container__photos .citech {
-    opacity: 0;
-    transform: scale(0);
-    position: absolute;
-    transition: 0.5s;
-  }
+.columns {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
-  #checked3:checked ~ .gallery__container .gallery__container__photos .others,
-  #checked3:checked ~ .gallery__container .gallery__container__photos .pnc {
-    opacity: 0;
-    transform: scale(0);
-    position: absolute;
-    transition: 0.5s;
-  }
-  #checked4:checked ~ .gallery__container .gallery__container__photos .citech,
-  #checked4:checked ~ .gallery__container .gallery__container__photos .pnc {
-    opacity: 0;
-    transform: scale(0);
-    position: absolute;
-    transition: 0.5s;
-  }
+.img-wrapper {
+  max-width: 500px;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid $accent-color;
+  border-radius: 1.5rem;
 }

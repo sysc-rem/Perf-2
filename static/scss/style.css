@@ -14,17 +14,19 @@ body {
 }
 
 main {
-  height: 100%;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#contact-us-page h1, #about-us-page h1 {
+#contact-us-page h1, #about-us-page h1, .gallery h1 {
   font-weight: normal;
   font-size: 2.2rem;
   margin: 40px 0;
   position: relative;
 }
-#contact-us-page h1::before, #about-us-page h1::before {
+#contact-us-page h1::before, #about-us-page h1::before, .gallery h1::before {
   content: "";
   position: absolute;
   width: 24rem;
@@ -35,163 +37,41 @@ main {
 }
 
 .home {
-  height: 95vh;
+  min-height: 95vh;
 }
 
 .gallery {
-  height: 95vh;
-}
-.gallery__container {
-  width: 100%;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.gallery__container h1 {
-  font-weight: normal;
-  font-size: 2.2rem;
-  margin: 40px 0;
-  position: relative;
-}
-.gallery__container h1::before {
-  content: "";
-  position: absolute;
-  width: 24rem;
-  height: 3px;
-  background: rgb(216, 233, 168);
-  bottom: -10px;
-  text-align: center;
-}
-.gallery__container__top-content {
-  width: 100vw;
   margin: 2rem;
-  border-radius: 1.2rem;
-  box-shadow: 3px 3px 5px lightgray;
+  min-height: 95vh;
+}
+.gallery h1::before {
+  width: 7rem;
+}
+
+.img-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  justify-content: start;
-  flex-wrap: wrap;
-  gap: 5rem;
+  gap: 2rem;
+  padding: 2rem;
 }
-.gallery__container__top-content h3 {
-  color: rgb(78, 159, 61);
-  padding: 0 50px;
-  border-right: 2px solid gray;
-  height: 100%;
+
+.columns {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-.gallery__container__top-content label {
-  display: inline-block;
-  height: 100%;
-  padding: 0 50px;
-  line-height: 60px;
-  transition: color 0.5s ease-in-out;
-  cursor: pointer;
+
+.img-wrapper {
+  max-width: 500px;
 }
-.gallery__container__top-content label:hover {
-  color: rgb(78, 159, 61);
-}
-.gallery__container__photos {
-  width: 90%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
-}
-.gallery__container__photos .pic {
-  position: relative;
-  height: 330px;
-  border-radius: 1rem;
-  box-shadow: 3px 3px 5px lightgray;
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-}
-.gallery__container__photos .pic img {
+
+.img-wrapper img {
   width: 100%;
   height: 100%;
-  border-radius: 1rem;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.gallery__container__photos .pic::before {
-  content: "PHOTO GALLERY";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: white;
-  transform: translate(-50%, -50%);
-  font-size: 22px;
-  font-weight: bold;
-  width: 100%;
-  margin-top: -100%;
-  opacity: 0;
-  transition: 0.3s;
-  transition-delay: 0.2s;
-  z-index: 1;
-}
-.gallery__container__photos .pic::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  border-radius: 1rem;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  transition: 0.3s;
-  opacity: 0;
-}
-.gallery__container__photos .pic:hover::after {
-  height: 100%;
-  opacity: 1;
-}
-.gallery__container__photos .pic:hover::before {
-  margin-top: 0;
-  opacity: 1;
-}
-.gallery #checked1:checked ~ .gallery__container .gallery__container__photos .pic {
-  opacity: 1;
-  transform: scale(1);
-  position: relative;
-}
-.gallery #checked2:checked ~ .gallery__container .gallery__container__photos .pnc {
-  opacity: 1;
-  transform: scale(1);
-  position: relative;
-}
-.gallery #checked3:checked ~ .gallery__container .gallery__container__photos .citech {
-  opacity: 1;
-  transform: scale(1);
-  position: relative;
-}
-.gallery #checked4:checked ~ .gallery__container .gallery__container__photos .others {
-  opacity: 1;
-  transform: scale(1);
-  position: relative;
-}
-.gallery #checked2:checked ~ .gallery__container .gallery__container__photos .others,
-.gallery #checked2:checked ~ .gallery__container .gallery__container__photos .citech {
-  opacity: 0;
-  transform: scale(0);
-  position: absolute;
-  transition: 0.5s;
-}
-.gallery #checked3:checked ~ .gallery__container .gallery__container__photos .others,
-.gallery #checked3:checked ~ .gallery__container .gallery__container__photos .pnc {
-  opacity: 0;
-  transform: scale(0);
-  position: absolute;
-  transition: 0.5s;
-}
-.gallery #checked4:checked ~ .gallery__container .gallery__container__photos .citech,
-.gallery #checked4:checked ~ .gallery__container .gallery__container__photos .pnc {
-  opacity: 0;
-  transform: scale(0);
-  position: absolute;
-  transition: 0.5s;
+  border: 2px solid rgb(78, 159, 61);
+  border-radius: 1.5rem;
 }
 
 #about-us-page {
@@ -200,11 +80,18 @@ main {
 #about-us-page h1::before {
   width: 11rem;
 }
-#about-us-page .img-wrapper {
+#about-us-page .about-img-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#about-us-page .about-img-wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 #about-us-page .about-text {
   margin: 2rem;
@@ -212,21 +99,39 @@ main {
 }
 
 #contact-us-page {
+  width: 100vw;
+  min-height: 100vh;
+}
+#contact-us-page h1::before {
+  width: 11rem;
+}
+#contact-us-page h1 {
+  margin-bottom: 7.5rem;
+  text-align: center;
+}
+#contact-us-page .contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-items: start;
+  gap: 5rem;
+  margin-left: 9rem;
+  flex-wrap: wrap;
+}
+#contact-us-page .contact-container .left-side {
+  border-right: 2px solid rgb(78, 159, 61);
+  padding-right: 5rem;
+}
+#contact-us-page .contact-container .left-side .left-content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 5rem;
-  height: 94vh;
-  width: 100vw;
+  margin-bottom: 2rem;
 }
-#contact-us-page h1::before {
-  width: 14rem;
-}
-#contact-us-page .form {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-left: 30rem;
+#contact-us-page .contact-container .left-side .left-content h5 {
+  margin-top: 0.7rem;
 }
 
 .c-item {
@@ -248,7 +153,7 @@ main {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 34vh;
+  margin-top: 2rem;
   flex-wrap: wrap;
   gap: 3rem;
   margin-bottom: 1rem;

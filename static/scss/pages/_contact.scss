@@ -1,20 +1,51 @@
-@use "../abstract/" as *;
+@use '../abstract/' as *;
 
 #contact-us-page {
-  @include flexCenter(column);
-
-  @extend %h1-line;
-  h1::before{
-    width: 14rem;
-  }
-  gap: 5rem;
-  height: 94vh;
   width: 100vw;
+  min-height: 100vh;
  
-
-  .form{
-    width: fit-content;
-    margin-left: 30rem
- 
+  @extend %h1-line;
+  h1::before {
+    width: 11rem;
   }
+  h1{
+    margin-bottom: 7.5rem;
+    text-align: center;
+  }
+
+  .contact-container{
+    @include flexCenter();
+    align-items: start;
+    gap: 5rem;
+    margin-left: 9rem;
+    flex-wrap: wrap;
+    .left-side{
+      border-right: 2px solid $accent-color;
+      padding-right: 5rem;
+     
+      .left-content{
+        @include flexCenter(column);
+        margin-bottom: 2rem;
+        h5{
+          margin-top: 0.7rem;
+        }
+      }
+    }
+
+    // .left-side::before{
+    //   content: '';
+    //   width: 2px;
+    //   background: red;
+    //   position: relative;
+    //   right: -15px;
+    //   top: 50%;
+    //   transform: translateY(-50%);
+    //   z-index: 1;
+
+    // }
+    // .right-side{
+
+    // }
+  }
+
 }

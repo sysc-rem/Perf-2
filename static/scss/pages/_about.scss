@@ -2,14 +2,19 @@
 
 #about-us-page {
   text-align: center;
+  @extend %h1-line;
+  h1::before {
+    width: 11rem;
+  }
 
- @extend %h1-line;
- h1::before{
-  width: 11rem;
-}
-
-  .img-wrapper {
+  .about-img-wrapper {
     @include flexCenter;
+    width: fit-content;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
   }
 
   .about-text {
