@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,7 +34,9 @@
       id="home-navbar"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Pamantasan ng Cabuyao</a>
+        <a class="navbar-brand" href="#">
+          <img src="static\assets\images\home\brand.png">
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -99,6 +101,24 @@
               data-bs-slide-to="2"
               aria-label="Slide 3"
             ></button>
+            <button
+              type="button"
+              data-bs-target="#home__carousel"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#home__carousel"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#home__carousel"
+              data-bs-slide-to="5"
+              aria-label="Slide 6"
+            ></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active c-item">
@@ -111,6 +131,27 @@
             <div class="carousel-item c-item">
               <img
                 src="./static/assets/images/home/431760271_387205407585072_912995.webp"
+                class="d-block w-100 c-image"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item c-item">
+              <img
+                src="./static/assets/images/home/432774049_387206940918252_856463.webp"
+                class="d-block w-100 c-image"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item c-item">
+              <img
+                src="./static/assets/images/home/432774049_387206940918252_856463.webp"
+                class="d-block w-100 c-image"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item c-item">
+              <img
+                src="static\assets\images\gallery\40458135373_ced6dfa2f1_o.jpg"
                 class="d-block w-100 c-image"
                 alt="..."
               />
@@ -144,7 +185,7 @@
         </div>
 
         <div class="home-btn">
-          <button type="button" class="btn btn-dark home-btn__btns">
+          <button type="button" class="btn home-btn__btns">
             <div class="btn-wrapper">
               <div class="icon">
                 <i class="fa-solid fa-hand-sparkles fa-2xl"></i>
@@ -155,7 +196,7 @@
               </div>
             </div>
           </button>
-          <button type="button" class="btn btn-dark home-btn__btns">
+          <button type="button" class="btn home-btn__btns">
             <div class="btn-wrapper">
               <div class="icon">
                 <i class="fa-solid fa-newspaper fa-2xl"></i>
@@ -166,7 +207,7 @@
               </div>
             </div>
           </button>
-          <button type="button" class="btn btn-dark home-btn__btns">
+          <button type="button" class="btn home-btn__btns">
             <div class="btn-wrapper">
               <div class="icon">
                 <i class="fa-solid fa-bullhorn fa-2xl"></i>
@@ -190,11 +231,18 @@
                 alt=""
               />
             </div>
+
+            <div class="img-wrapper">
+              <img
+                src="static\assets\images\gallery\432361821_1075790873682663_84499.webp"
+                alt=""
+              />
+            </div>
+
             <div class="img-wrapper">
               <img
               src="./static/assets/images/gallery/431612571_7370171839695742_89251.webp"
                 alt=""
-
               />
             </div>
 
@@ -204,7 +252,16 @@
                 alt=""
               />
             </div>
+
+            <div class="img-wrapper">
+              <img
+                src="./static/assets/images/gallery/431680356_1530544024476167_91330.webp"
+                alt=""
+              />
+            </div>
+
           </div>
+
           <div class="columns">
             <div class="img-wrapper">
               <img
@@ -221,8 +278,17 @@
             </div>
 
             <div class="img-wrapper">
-              <img alt=""  src="./static/assets/images/gallery/432263916_1609653609852016_72692.webp"/>
+              <img 
+                alt=""  
+                src="./static/assets/images/gallery/432263916_1609653609852016_72692.webp"/>
             </div>
+
+            <div class="img-wrapper">
+              <img 
+                alt=""  
+                src="./static/assets/images/gallery/432263916_1609653609852016_72692.webp"/>
+            </div>
+
           </div>
           <div class="columns">
             <div class="img-wrapper">
@@ -238,29 +304,38 @@
                 alt=""
               />
             </div>
+
             <div class="img-wrapper">
               <img
-              src="./static/assets/images/gallery/431742984_896431242231046_128751.webp"
+                src="./static/assets/images/gallery/431742984_896431242231046_128751.webp"
                 alt=""
               />
             </div>
+
+            <div class="img-wrapper">
+              <img
+                src="./static/assets/images/gallery/431742984_896431242231046_128751.webp"
+                alt=""
+              />
+            </div>
+
+            <div class="img-wrapper">
+              <img
+                src="./static/assets/images/gallery/431742984_896431242231046_128751.webp"
+                alt=""
+              />
+            </div>
+
           </div>
         </div>
       </section>
 
-      <section id="about-us-page">
-        <h1>ABOUT US</h1>
+      <section class="about-us-page" id="about-us-page">
+        <h1> About Us</h1>
+        
+
         <div class="about-img-wrapper">
           <img src="./static/assets/images/about/History.pnc_.png" alt="" />
-        </div>
-        <div class="about-text">
-          <p>
-            lorem rem lorem rem lorem rem lorem rem lorem rem lorem rem lorem
-            rem lorem rem lorem rem lorem rem lorem rem lorem rem lorem rem
-            lorem rem lorem rem lorem rem lorem rem lorem rem lorem rem lorem
-            rem lorem rem lorem rem lorem rem lorem rem lorem rem lorem rem
-            lorem rem
-          </p>
         </div>
       </section>
 
@@ -289,15 +364,37 @@
             <h5>Send us a message</h5>
             <p>If you have any concern, please do contact us!</p>
             <form action="#">
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Email address</label
-                >
+              <div class="mb-3" id="email-add">
+                <label for="exampleFormControlInput1" class="form-label">
+                  Email address
+                </label>
                 <input
                   type="email"
                   class="form-control"
                   id="exampleFormControlInput1"
                   placeholder="name@example.com"
+                />
+              </div>
+              <div class="mb-3" id="email-add">
+                <label for="exampleFormControlInput1" class="form-label">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="John Doe"
+                />
+              </div>
+              <div class="mb-3" id="email-add">
+                <label for="exampleFormControlInput1" class="form-label">
+                  Age
+                </label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="18"
                 />
               </div>
               <div class="mb-3">

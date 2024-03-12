@@ -1,10 +1,9 @@
 @use '../abstract/' as *;
 
 .navbar-brand{
-
-    color: $secondary-color;
-    font-weight: bold;
-    font-size: 2rem;
+    img {
+        width: 45%;
+    }
 }
 
 .nav-link{
