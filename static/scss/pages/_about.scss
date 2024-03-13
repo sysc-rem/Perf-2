@@ -5,7 +5,7 @@
   @include flexCenter(column);
   @extend %h1-line;
   h1::before {
-    width: 11rem;
+    width: 9rem;
   }
 
   .about-img-wrapper {
@@ -21,7 +21,7 @@
   .about-text {
     margin: 2rem;
     padding: 2.5rem;
-    text-align: start;
+    text-align: center;
     @include flexCenter(column);
     .long-text{
       @include flexCenter();
@@ -31,19 +31,19 @@
 
       .mission{
         border-right: 2px solid $accent-color;
-        padding-right: 5rem;
-   
+        padding-right: 15rem;
       }
-      border-bottom: 2px solid $accent-color;
-    }
-    .core-values{
-      h3{
-        text-align: center;
+      
+      .vision {
+        .table {
+          display: flex;
+
+          p {
+            text-align: start;
+            margin-left: 4rem;
+          }
+        }
       }
-      p{
-        margin-left: 8rem;
-      }
-      border-bottom: 2px solid $accent-color;
     }
   }
 }

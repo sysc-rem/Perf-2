@@ -1,18 +1,11 @@
 @use '../abstract/' as *;
 
-.navbar-brand{
-
-    // color: $secondary-color;
-    font-weight: bold;
-    font-size: 2rem;
+.navbar-brand {
+    img {
+        width: 45%;
+    }
 }
 
 .nav-link{
     color: $accent-color;
-}
-
-.lol{
-    background: rgba(255,255,255, 0.2);
- 
-   
 }

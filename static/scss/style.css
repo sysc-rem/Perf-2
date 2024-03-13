@@ -51,14 +51,14 @@ main {
 
 .img-container {
   display: flex;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .columns {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .img-wrapper {
@@ -70,8 +70,9 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 3px solid rgb(78, 159, 61);
-  border-radius: 1.5rem;
+  border: 1px solid rgb(78, 159, 61);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 #about-us-page {
@@ -82,7 +83,7 @@ main {
   flex-direction: column;
 }
 #about-us-page h1::before {
-  width: 11rem;
+  width: 9rem;
 }
 #about-us-page .about-img-wrapper {
   display: flex;
@@ -100,7 +101,7 @@ main {
 #about-us-page .about-text {
   margin: 2rem;
   padding: 2.5rem;
-  text-align: start;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,20 +114,17 @@ main {
   flex-direction: row;
   gap: 5rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid rgb(78, 159, 61);
 }
 #about-us-page .about-text .long-text .mission {
   border-right: 2px solid rgb(78, 159, 61);
-  padding-right: 5rem;
+  padding-right: 15rem;
 }
-#about-us-page .about-text .core-values {
-  border-bottom: 2px solid rgb(78, 159, 61);
+#about-us-page .about-text .long-text .vision .table {
+  display: flex;
 }
-#about-us-page .about-text .core-values h3 {
-  text-align: center;
-}
-#about-us-page .about-text .core-values p {
-  margin-left: 8rem;
+#about-us-page .about-text .long-text .vision .table p {
+  text-align: start;
+  margin-left: 4rem;
 }
 
 #contact-us-page {
@@ -191,6 +189,7 @@ main {
 .home-btn__btns {
   width: 15em;
   height: 12em;
+  box-shadow: rgba(78, 159, 61, 0.3) 0px 8px 24px;
 }
 .home-btn__btns .btn-wrapper {
   padding: 0.5em;
@@ -205,15 +204,10 @@ main {
   color: rgb(78, 159, 61);
 }
 
-.navbar-brand {
-  font-weight: bold;
-  font-size: 2rem;
+.navbar-brand img {
+  width: 45%;
 }
 
 .nav-link {
   color: rgb(78, 159, 61);
-}
-
-.lol {
-  background: rgba(255, 255, 255, 0.2);
-}
+}/*# sourceMappingURL=style.css.map */
