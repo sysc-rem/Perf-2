@@ -1,6 +1,6 @@
 @use '../abstract/' as *;
 
-.navbar-brand{
+.navbar-brand {
     img {
         width: 45%;
     }
@@ -9,3 +9,4 @@
 .nav-link{
     color: $accent-color;
 }
+
